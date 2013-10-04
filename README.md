@@ -1,4 +1,4 @@
 streamqueue
 ===========
 
-A MD book on streaming 
+A MD book on streaming and queuing
