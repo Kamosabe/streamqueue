@@ -1,12 +1,8 @@
 # References
 
-## Rabbit MQ
-* Alvaro Videla, Jason J.W. Williams, "RabbiteMQ in Action", Manning, 2012, ISBN: 9781935182979
+(here we collect only references that do not discuss a specific product.
+I.e. all references global to queuing! I suggest that eduard keeps his 
+references in the Streaming folder.)
 
-## Category A
-
-lorem ipsum
-
-## Category B
-
-lorem ipsum
+* lorem ipsum A
+* Lorem ipsum B
