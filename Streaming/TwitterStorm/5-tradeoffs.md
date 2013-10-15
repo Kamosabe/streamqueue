@@ -1,3 +1,0 @@
-## Tradeoffs
-
-lorem ipsum
