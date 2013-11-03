@@ -5,13 +5,14 @@ This file should be a template for all the fact files we have to create. Thereby
 
 | #                  | description                                                           |
 | ------------------ | --------------------------------------------------------------------- |
-| Software developer | JBoss, Apache, ...                                                    |
-| Stable release     | version and date                                                      |
-| Development status | planning, pre-alpha, alpha, beta, stable/production, mature, inactive |
-| Language           | Java, C++, ...                                                        |
-| Operating system   | Windows, Mac, Cross-platform, ...                                     |
-| Type               | message-oriented middleware, ...                                      |
-| License            | Apache License, GNU General Public License, ...                       |
+| Software developer | Apache                                                                |
+| Stable release     | 5.8.0 - February 11, 2013                                             |
+| Development status | stable/production                                                     |
+| Language           | Java                                                                  |
+| Operating system   | Cross-platform                                                        |
+| Type               | message-oriented middleware                                           |
+| License            | Apache License 2.0                                                    |
+| Website            | http://activemq.apache.org                                            |
 
 
 
