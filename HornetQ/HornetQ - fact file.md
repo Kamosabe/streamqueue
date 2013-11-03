@@ -1,13 +1,15 @@
 #HornetQ - Fact File
 
-- Software developer (JBoss, Apache, ...)
-- Stable release (version and date)
-- Development status (planning, pre-alpha, alpha, beta, stable/production, mature, inactive, ...)
-- Language (Java, C++, ...)
-- Operating system (Windows, Mac, Cross-platform, ...)
-- Type (message-oriented middleware, ...)
-- License (Apache License, GNU General Public License, ...)
-- Website
+| #                  | description |
+| ------------------ | ---------------------- |
+| Software developer | JBoss                  |
+| Stable release     | 2.3.0 - April 25, 2013 |
+| Development status | stable/production      |
+| Language           | Java                   |
+| Operating system   | Cross-platform         |
+| Type               | asynchronous messaging |
+| License            | Apache License 2.0     |
+| Website            | http://www.hornetq.org |
 
 
 
