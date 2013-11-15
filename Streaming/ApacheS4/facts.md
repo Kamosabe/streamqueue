@@ -10,7 +10,7 @@
 | Language            | Java |
 | Operating system    | Cross-platform (Microsoft Windows - Cygwin environment not supported) |
 | Type                | Complex Event Processing |
-| Subtype             | Streaming |
+| Category            | Streaming |
 | License             | Apaching License version 2.0 |
 | Website             | [S4](http://incubator.apache.org/s4/) |
 | Community           | [GitHub](https://github.com/s4/s4), [Apache Incubator Project S4](http://incubator.apache.org/projects/s4.html), [Apache Incubator S4 Proposal](http://wiki.apache.org/incubator/S4Proposal) |
