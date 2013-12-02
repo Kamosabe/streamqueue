@@ -6,7 +6,7 @@ For building a storm cluster there are depenendencies to be solved. The next cha
 
 ### Apache Zookeeper
 
-Zookeeper can be installed wird aptitude. The configuration files are stored with default settings in the filesystem in the path /etc/zookeeper. There are no modification in terms of optimizations.
+Zookeeper can be installed with aptitude. The configuration files are stored with default settings in the filesystem in the path /etc/zookeeper. There are no modification in terms of optimizations.
 To check if zookeeper is up and running a zookeeper client should get a connection:
 ```
 ./zkCli.sh -server 127.0.0.1:2181 
