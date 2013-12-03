@@ -1,12 +1,9 @@
-#Fact File Template (IN PROGRESS)
-This file should be a template for all the fact files we have to create. Thereby we could compare the services on an easier way. As first step it is only a proposal which should be completed by all of us.  
-
-----------
+#Fact File ActiveMQ
 
 | #                  | description                                                           |
 | ------------------ | --------------------------------------------------------------------- |
 | Software developer | Apache                                                                |
-| Stable release     | 5.8.0 - February 11, 2013                                             |
+| Stable release     | 5.9.0 - October 21, 2013                                             |
 | Development status | stable/production                                                     |
 | Language           | Java                                                                  |
 | Operating system   | Cross-platform                                                        |
