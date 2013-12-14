@@ -72,14 +72,14 @@ Every command should be executed in a separate shell. So that storm is up and ru
 
 To run the topology the storm-starter package will be used. Also to start maven must be available on the system.
 
-Clone with git storm-starter:
+Clone with git storm-starter into /opt/storm-starter:
 ```
 git clone https://github.com/nathanmarz/storm-starter.git
 ```
 
-Run the topology in the shell:
+Run the topology in the shell (/opt/storm-starter):
 ```
-mvn -f m2.pom compile exec:java -Dexec.classpathScope=compile -Dexec.mainClass=storm.starter.WordCountTopology
+mvn -f m2-pom.xml compile exec:java -Dexec.classpathScope=compile -Dexec.mainClass=storm.starter.WordCountTopology
 ```
 
 Result output:

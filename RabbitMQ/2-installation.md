@@ -8,6 +8,7 @@ RabbitMQ Server requires Erlang ...
 - Download Erlang ([Website](http://www.erlang.org/download.html))
 - Install Erlang
 - SET ERLANG_HOME
+ - Windows: Control Panel > System and Security > System Properties > Advanced > Environment Variables > User Variables
 
 ### RabbitMQ Server
 
