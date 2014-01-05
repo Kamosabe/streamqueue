@@ -12,5 +12,5 @@
 | Type                | Complex Event Processing |
 | Category            | Streaming |
 | License             | Apaching License version 2.0 |
-| Website             | [S4](http://incubator.apache.org/s4/), (Apache incubator-s4 source code)[https://github.com/apache/incubator-s4] |
+| Website             | [S4](http://incubator.apache.org/s4/), [Apache incubator-s4 source code](https://github.com/apache/incubator-s4) |
 | Community           | [GitHub](https://github.com/s4/s4), [Apache Incubator Project S4](http://incubator.apache.org/projects/s4.html), [Apache Incubator S4 Proposal](http://wiki.apache.org/incubator/S4Proposal) |
