@@ -1,0 +1,15 @@
+- introduction
+- installation
+- description
+- apis
+- tradeoffs
+
+(configuration and administration can be a part of installation
+or an extra chapter behind the APIs- introduction
+- installation
+- description
+- apis
+- tradeoffs
+
+(configuration and administration can be a part of installation
+or an extra chapter behind the APIs))
