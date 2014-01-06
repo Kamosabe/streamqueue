@@ -16,7 +16,7 @@ In S4 there is a Processing Element (PE) which consumes an event, emit one or mo
 | Operating system    | Cross-platform (Microsoft Windows - Cygwin environment not supported) |
 | Type                | Complex Event Processing |
 | Category            | Streaming |
-| License             | Apaching License version 2.0 |
+| License             | Apache License version 2.0 |
 | Website             | [S4](http://incubator.apache.org/s4/), [Apache incubator-s4 source code](https://github.com/apache/incubator-s4) |
 | Community           | [GitHub](https://github.com/s4/s4), [Apache Incubator Project S4](http://incubator.apache.org/projects/s4.html), [Apache Incubator S4 Proposal](http://wiki.apache.org/incubator/S4Proposal) |
 
