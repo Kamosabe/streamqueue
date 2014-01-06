@@ -4,6 +4,8 @@ On the Apache web page S4 is described as 'a general-purpose, distributed, scala
 
 ## Introduction
 
+In S4 there is a Processing Element (PE) which consumes an event, emit one or more events or publish the results. Emitted events can be consumed by other Processing Elements. The implementation of a Processing Element can be for example a quote splitter and another Processing Element based on the quote splitter can be a word counter.
+
 | Fact                | Description |
 | :--- | :--- |
 | Software developer  | Matthieu Morel (Lead developer) |
