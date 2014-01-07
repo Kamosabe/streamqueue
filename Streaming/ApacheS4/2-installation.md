@@ -83,6 +83,13 @@ Start nodes in 2 shells:
 ```
 ./s4 node -c=cluster1
 ```
+
+Create and deploy new application in cluster1:
+```
+./s4 s4r -a=hello.HelloApp -b=`pwd`/build.gradle myApp
+./s4 deploy -s4r=`pwd`/build/libs/myApp.s4r -c=cluster1 -appName=myApp
+```
+
 Result first and second shell:
 ```
 03:06:28.213 [main] INFO  o.a.s.comm.topology.AssignmentFromZK - New session:91027761808408578; state is : SyncConnected
@@ -91,6 +98,8 @@ Result first and second shell:
 03:07:24.320 [main] INFO  o.a.s.comm.topology.AssignmentFromZK - New session:91027761808408579; state is : SyncConnected
 03:07:24.420 [main] INFO  o.a.s.comm.topology.AssignmentFromZK - Successfully acquired task:Task-1 by s4
 ```
+
+
 Provide 2nd cluster, deploy, start and provide some data to external stream (in the same directory of myApp):
 ```
 ./s4 newCluster -c=cluster2 -nbTasks=1 -flp=13000
