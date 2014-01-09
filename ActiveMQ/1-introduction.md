@@ -13,4 +13,17 @@ ActiveMQ is very flexible. There are a lot of programming languages, operating s
 * **operating sytems:** cross plattform 
 * **servers:** Tomcat, Jetty, Webspere, ... or Standalone
 
+## Fact File
 
+| Fact               | Description                                                           |
+| ------------------ | --------------------------------------------------------------------- |
+| Software developer | Apache                                                                |
+| Stable release     | 5.9.0 - October 21, 2013                                              |
+| Development status | Active                                                                |
+| Development release| 5.10.0                                                                |
+| Language           | Java                                                                  |
+| Operating system   | Cross-platform                                                        |
+| Type               | message-oriented middleware                                           |
+| Subtype            | Queuing                                                               |
+| License            | Apache License 2.0                                                    |
+| Website            | http://activemq.apache.org                                            |
