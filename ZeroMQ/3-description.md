@@ -9,7 +9,7 @@
 * creating socket
 * comparable to classic client server model and rpc
 
-![Request - Response](/images/reqres.png)
+![Request - Response](images/reqres.png)
 
 
 #### Publish - Subscribe
@@ -20,7 +20,7 @@
 * If a publisher has no connected subscribers, then it will simply drop all messages.
 * If you're using TCP and a subscriber is slow, messages will queue up on the publisher.
 
-![Publish - Subscribe](/images/publish-subscribe.png)
+![Publish - Subscribe](images/publish-subscribe.png)
 
 #### Push / Pull
 * parallel processing model
@@ -32,4 +32,4 @@
 * The ventilator's PUSH socket distributes tasks to workers evenly (load balancing).
 * The sink's PULL socket collects results from workers evenly (fair-queuing).
 
-![Divide and Conquer](/images/divide-conquer.png) 
+![Divide and Conquer](images/divide-conquer.png) 

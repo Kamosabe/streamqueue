@@ -3,7 +3,7 @@
 
 ## introduction
 * not a traditional message queue
-* looks like an embeddable networking library but acts like a concurrency framework
+* looks like an embedable networking library but acts like a concurrency framework
 * gives sockets that carry atomic messages across various transports like in-process, inter-process, TCP, multicast.
 * Zero stands for: zero broker, zero latency, zero administration, zero cost, zero waste: culture of minimalism.
 * "how to connect any code to any code, anywhere"
@@ -26,4 +26,4 @@ is (e.g., in-process, inter-process, TCP, or multicast).
 * It does all I/O in background threads. 
 * It uses lock-free techniques for talking between nodes, so there are never locks, waits, semaphores, or deadlocks.
 
-### dissdvantages
+### disadvantages
