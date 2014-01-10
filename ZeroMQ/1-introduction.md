@@ -3,11 +3,10 @@
 
 ## introduction
 * not a traditional message queue
-* looks like an embedable networking library but acts like a concurrency framework
+* looks like an embeddable networking library but acts like a concurrency framework
 * gives sockets that carry atomic messages across various transports like in-process, inter-process, TCP, multicast.
 * Zero stands for: zero broker, zero latency, zero administration, zero cost, zero waste: culture of minimalism.
 * "how to connect any code to any code, anywhere"
-
 * ZMQ applications always start by creating a *context*, and then using that for creating sockets.
 * messages are just strings, bytes
 * Traditional network programming is built on the general assumption that one socket talks to one connection, one peer. 

@@ -1,7 +1,5 @@
 #RabbitMQ Fact File 
 
-----------
-
 | #                  | description                                                           |
 | ------------------ | --------------------------------------------------------------------- |
 | Software developer | Pivotal Software, Inc.                                                |

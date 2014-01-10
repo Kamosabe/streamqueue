@@ -5,27 +5,24 @@ RabbitMQ Server requires Erlang ...
 [http://www.rabbitmq.com/download.html](http://www.rabbitmq.com/download.html)
 
 ### Erlang
-- Download Erlang ([Website](http://www.erlang.org/download.html))
-- Install Erlang
-- SET ERLANG_HOME
- - Windows: Control Panel > System and Security > System Properties > Advanced > Environment Variables > User Variables
+Download Erlang from it's homepage ([Website](http://www.erlang.org/download.html)) and install it.
+
+Then you should set the *ERLANG_HOME* variable as an enviroment variable.
+
+On Windows you can do that by navigating to *Control Panel > System and Security > System Properties > Advanced > Environment Variables > User Variables* and creating a new entry.
 
 ### RabbitMQ Server
 
 #### Windows
 
 ##### With Installer
-- Download RabbitMQ Server (.exe File) ([Website](http://www.rabbitmq.com/install-windows.html))
-- Install RabbitMQ Server
+Download the RabbitMQ Server (.exe File) from the ([Website](http://www.rabbitmq.com/install-windows.html)) and install it.
 
 ##### Manual
-- Download RabbitMQ Server (.zip File) ([Website](http://www.rabbitmq.com/install-windows-manual.html))
-- Unzip RabbitMQ Server
-- Place content of rabbitmq_server-3.1.5 folder in some suitable directory
+Download RabbitMQ Server (.zip File) from ([Website](http://www.rabbitmq.com/install-windows-manual.html)), unzip it and place the content of *rabbitmq_server-XXX* folder in some suitable directory.
 
 #### Linux (Ubuntu / Debian)
-- download .deb File ([Website](http://www.rabbitmq.com/install-debian.html))
-- install 
+Download the Debian-File from the ([Website](http://www.rabbitmq.com/install-debian.html)) and install it.
 
 #### Mac OS X
 - download zipped folder ([Website](http://www.rabbitmq.com/install-standalone-mac.html))

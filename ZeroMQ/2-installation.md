@@ -2,21 +2,36 @@
 (http://zeromq.org/area:download)
 
 ### Linux
+Make sure you have libtool, autoconf, automake, uuid-dev installed, otherwise you have may have to install them by:
 
-* Make sure libtool, autoconf, automake, uuid-dev is installed
-	* otherwise: sudo apt-get install 'package-name'
-* make sure c++ compiler is installed
-	* otherwise: sudo apt-get install build-essential
-* Unpack the tar.gz file
-	* tar -xvzf zeromq...tar.gz
-* Configure, Make, Make install (http://tldp.org/LDP/LG/current/smith.html)
-	* ./configure
-	* make
-	* sudo make install
-* install java:
-	* sudo apt-get install default-jre
-	* sudo apt-get install default-jdk
-*      
+    sudo apt-get install libtool
+	sudo apt-get install autoconf
+	sudo apt-get install automake
+	sudo apt-get install uuid-dev
+
+Also make sure you have C++ Compiler installed, otherwise install it:
+
+	sudo apt-get install build-essential
+
+Then go to Download section on ZeroMQ homepage (http://zeromq.org/area:download) and download the latest stable release.
+
+Afterwards you have to unpack the tarball, create the make file and then build and install the program:
+
+	tar -xvzf zeromq...tar.gz
+	./configure
+	make
+	sudo make install
+
+If you do not have java installed already, you can install it by:
+
+	sudo apt-get install default-jre
+	sudo apt-get install default-jdk
+
+
+### Windows
+Download the latest stable relase of ZeroMQ (http://zeromq.org/distro:microsoft-windows) and install it somewhere on your local drive (e.g. "c:/")
+
+...
 
 
 ### Java Binding
@@ -29,11 +44,21 @@ JeroMQ (Pure Java ZeroMQ):
 
 
 #### Linux
-* Clone JZMQ from Github:
-	* git clone https://github.com/zeromq/jzmq.git
-* Build
-	* cd jzmq
-	* ./autogen.sh
-	* ./configure
-	* make
-	* sudo make install  
+Clone JZMQ from Github:
+	
+	git clone https://github.com/zeromq/jzmq.git
+
+Go to into folder:
+
+	cd jzmq
+
+Run the "autogen" script:
+	
+	./autogen.sh
+
+Build and install it:
+
+	./configure
+	make
+	sudo make install  
+
