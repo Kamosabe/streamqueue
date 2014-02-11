@@ -1,10 +1,8 @@
 ## Installation
 
-The following installation explains how to build and run a storm cluster on a single machine. At the end of this chapter there will be shown a demo of the wordcount topology. The installation will be done on a Linux operating system especially the Linux distribution Ubuntu is beeing used.
+In this chapter there is a guide of installing storm on a single machine. Required tools like Apache Zookeeper and ZeroMQ are introduced and the basic commands of running a single node storm cluster are shown. At the end of this chapter there will be shown a demo of the wordcount topology running on a local cluster. The word count example will use the programming language java. In case of simplicity, it is necessary to use Apache Maven to automatically download dependent libraries. The programming language closure will be introduced in a separate chapter. The installation was done on the Linux operating system Ubuntu version 13.10. Apple OS Mac OS X is also compatible with this guid. But Microsoft Windows needs a posix environment with [cygwin](http://www.cygwin.com/), which comes with "a large collection of GNU and Open Source tools". For building a storm cluster there are depenendencies to be solved. The next chapters are describing the building process on a single machine. Jump to chapter *"Running in a local cluster mode"* if there is only the need to get started with a local cluster mode.
 
-For building a storm cluster there are depenendencies to be solved. The next chapters are describing the building process.
-
-### Apache Zookeeper
+####  Apache Zookeeper
 
 Zookeeper can be installed with aptitude. The configuration files are stored with default settings in the filesystem in the path /etc/zookeeper. There are no modification in terms of optimizations.
 To check if zookeeper is up and running a zookeeper client should get a connection:
@@ -12,7 +10,7 @@ To check if zookeeper is up and running a zookeeper client should get a connecti
 ./zkCli.sh -server 127.0.0.1:2181 
 ```
 
-### ZeroMQ
+#### ZeroMQ
 
 ZeroMQ is a message queuing library and is used for message passing. Download and build zeromq. Because storm uses java bindings to zeromq jzmq must be build.
 
@@ -47,7 +45,7 @@ If storm is extracted to the filesystem path /opt/storm the configuration file /
 storm.local.dir: "/opt/storm"
 ```
 
-### Running cluster
+### Running a cluster
 
 Before storm can be started zookeeper must be running.
 Storm needs to start nimbus, supervisor and the ui.
@@ -66,18 +64,18 @@ At the the end the ui should be started:
 /opt/storm/bin/storm ui
 ``` 
 
-Every command should be executed in a separate shell. So that storm is up and running on system start, startup scripts needs to be created. Normally there are skeleton files in /etc.
+Every command should be executed in a separate shell. So that storm is up and running on system start, startup scripts needs to be created. Normally there are skeleton files in /etc. The last chapters shows how to run a demo in a local cluster. Only Apache Maven is required to execute the demo.
 
-### Running wordcount topology
+### Running in a local cluster mode
 
-To run the topology the storm-starter package will be used. Also to start maven must be available on the system.
+To run the topology the storm-starter package will be used. Also to start Apache Maven must be available on the system.
 
 Clone with git storm-starter into /opt/storm-starter:
 ```
 git clone https://github.com/nathanmarz/storm-starter.git
 ```
 
-Run the topology in the shell (/opt/storm-starter):
+Run the topology in the shell (/opt/storm-starter) with Apache Maven:
 ```
 mvn -f m2-pom.xml compile exec:java -Dexec.classpathScope=compile -Dexec.mainClass=storm.starter.WordCountTopology
 ```

@@ -4,7 +4,7 @@ According to Nathan Marz Apache Storm "is a distributed, fault-tolerant, and hig
 
 ## Introduction
 
-As a streaming framework Storm provides a set of primitives, aggregates and transformation functions. Storm consists of a scheduler, the supervisor and a ui frontend. The Scheduler is called nimbus and is used for job distribution. A Apache Zookeeper cluster is beeing used for the worker nodes. In the ui frontend it is possible to see the current state of the storm cluster. Following table lists facts about Storm:
+As a streaming framework Storm provides a set of primitives, aggregates and transformation functions. Storm consists of a scheduler, the supervisor and a ui frontend. The Scheduler is called nimbus and is used for job distribution. An Apache Zookeeper cluster is used for the worker nodes. In the ui frontend it is possible to see the current state of the storm cluster. Following table lists facts about Storm:
 
 | Fact                | Description |
 | :--- | :--- |
