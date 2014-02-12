@@ -2,20 +2,15 @@
 
 This section explains the installation of Apache ActiveMQ on a Windows and a Unix operating system.
 
-* **Demo???**
-* **Dependencies???**
 
-----------
-
-## Windows
+### Windows
 How to install and run the binary distribution on a Windows system is described in the following.
 
-### Windows Binary Installation
-
+#### Windows Binary Installation
  1. Download the latest release from http://activemq.apache.org/download.html
  2. Extract the ZIP file to a directory of your choice
 
-### Starting ActiveMQ
+#### Starting ActiveMQ
 After successful installation run the ActiveMQ Message Broker. Therefore it is necessary to open the Windows Console and change to the installation directory:
 
     cd [activemq_install_dir]
@@ -30,10 +25,10 @@ It is important to know that ActiveMQ creates a working directory relative to th
  
 ----------
 
-## Unix
+### Unix
 This procedure explains how to download and install the binary distribution on a Unix system.
 
-### Unix Binary Installation
+#### Unix Binary Installation
 Download the ActiveMQ-GZip file to the Unix machine using either a browser or a tool (e.g. wget, scp, ftp):
 
     > wget http://activemq.apache.org/path/tofile/apache-activemq-4.1.0-incubator.tar.gz
@@ -46,7 +41,7 @@ If the ActiveMQ start-up script is not executable change its permissions. The Ac
 
     > cd [activemq_install_dir]/bin
 
-### Starting ActiveMQ
+#### Starting ActiveMQ
 Use a command shell, change to the installation directory and run ActiveMQ:
 
     cd [activemq_install_dir]
