@@ -1,10 +1,10 @@
 ## Description
 
-In the chapter *"Installation: Running in a local cluster mode"* the wordcount example was used. In the next chapters the main code will be explained and then classified. Also other commands for running a storm applicition which is a topology are presented.
+In the chapter *"Installation: Running in a local cluster mode"* the wordcount example was used. In the this chapter the main code will be explained and then classified. Also other commands for running a storm applicition are presented.
 
 ### The WordCountTopology
 
-A storm application is usually packaged in a jar file. This jar file is deployed to a storm cluster or will be run on a local cluster. The following java source code shows a Topology which is instanciated with the TopoloyBuilder class. One spout RandomSentenceSpout is used for input data of random sentences and two bolts to parse and count the words. The bold SplitSentence is grouped by shuffle and the bolt WordCount by a FieldsGrouping. If there is no special command argument a LocalCluster class is used.
+A storm application is usually packaged in a jar file. This jar file is deployed to a storm cluster or will be run on a local cluster. The following java source code shows a Topology which is instantiated with the TopoloyBuilder class. One spout RandomSentenceSpout is used for input data of random sentences and two bolts to parse and count the words. The bolt SplitSentence is grouped by a shuffle and the bolt WordCount by a field grouping. If there is no special command argument the local cluster mode class is used.
 
 ```
 TopologyBuilder builder = new TopologyBuilder();
@@ -28,21 +28,3 @@ else {
 	cluster.shutdown();
 }
 ```
-
-#### Groupings
-
-* Shuffle grouping:
-
-* Fields grouping
-
-* All grouping:
-
-* Global grouping
-
-* None grouping
-
-* Direct grouping
-
-* Local or shuffle grouping
-
-![Figure Groupings](images/groupings.png)
