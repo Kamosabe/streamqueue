@@ -10,11 +10,11 @@ Besides reliability stream sockets via TCP also ensures sending data sequenced a
 
 Conventional Sockets allow only strict one-to-one and in some cases one-to-many or many-to-one relationships between endpoints, whereas ZMQ sockets allowing many-to-many relationships. Therefore it is possible that a ZMQ socket may be connected to multiple endpoints, sending messages to them and simultaneously accepting incoming connections from multiple different endpoints.
 
-But there are more important difference between conventional sockets and ZMQ sockets. 
+But there are more important differences between conventional sockets and ZMQ sockets. 
 
-ZMQ sockets are asynchronous. Compared to the BSD sockets they are not blocking. The application can hand the message over to ZMQ and the process further instead of waiting the message to be send via the socket. ZeroMQ will send the message in background. 
+ZMQ sockets are asynchronous. Compared to the BSD sockets they are not blocking. The application can hand the message over to ZMQ and process further instead of waiting the message to be send via the socket. ZeroMQ will send the message in background. 
 
-Also it does not matter if there is a destination available right now or not. If not ZMQ can enqueue the message and send it later when the receiver gets reconnected.
+Furthermore it does not matter if there is a destination available right now or not. If not, ZMQ can enqueue the message and send it later when the receiver gets reconnected.
 
 
 ### Socket API
@@ -80,3 +80,6 @@ As we were talking about messages all the time it would make sense to define wha
 
 
 Conventional sockets are transferring data as streams of bytes or discrete datagrams, but ZeroMQ transfers messages. Messages are length-specified binary data without trailing 0 (not C style). They can be multiparted and must fit in memory. ZeroMQ guarantees to deliver all parts of an message or none of them. As ZeroMQ does not know anything about the data (except its size) the formatting is completely up to the developer of the application.
+
+Multipart messages can be send ...
+

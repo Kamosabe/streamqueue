@@ -3,13 +3,9 @@
 ## introduction
 Message Queuing is all about connecting two or more endpoints and sending messages between them. Implemented as simple FIFO queues, priority queues or double-ended queues they enable us to communicate asynchronously between loosely-coupled components. 
 
-...
-
 Especially in large-scaled distributed systems message queuing is widely used. 
 
-...
-
-![Message Queuing](images/message-queue.png)
+![Message Queuing](images/broker.png)
 
 But ZeroMQ is not a traditional message queue. It's not like ActiveMQ or RabbitMQ for example. It's brokerless. It has no central broker, no single point of failure. Applications can directly communicate with each other. It is more a library that let us build our own message queuing system.  
 
