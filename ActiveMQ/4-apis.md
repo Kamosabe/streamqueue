@@ -1,7 +1,7 @@
 ## APIs
+The following chapter describes supported APIs which are important to know. The already known JMS API is not mentioned here again. Its quite common to support it. 
 
-
-###Integrating Broker
+###Embedded Broker
 In Chapter 2 the installation of ActiveMQ is focused on the standalone middleware component, but ActiveMQ supports communication with embedded brokers too. Being a Java application itself, ActiveMQ could be naturally integrated in other Java applications. 
 
 To use ActiveMQ in native Java you have to use:
