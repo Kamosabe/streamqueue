@@ -19,9 +19,16 @@ HornetQ provides a fully JMS 1.1 (Java Message Service) compliant API. The JMS s
 HornetQ has its own client side API which can be used instead of JMS. The HornetQ core API provides all the power of JMS without some of its complexity and more features. 
 
 ####Integration
-HornetQ is designed as a set of Plain old Java Objects (POJOs) without any third party dependencies. It only requires standard JDK classes. Therefore its very easy to run it in JBoss Microcontainer, Spring or embedded in any third party product. 
+HornetQ is designed as a set of **Plain old Java Objects** (POJOs) without any third party dependencies. It only requires standard JDK classes. Therefore its very easy to run it in JBoss Microcontainer, Spring or embedded in any third party product. 
+
+HornetQ has its own fully functional **Java Connector Architecture** (JCA) adaptor. It enables a simple integration into any JEE compliant application server. The picture below demonstrates the architecture.
+
+![enter image description here][1]
 
 ####Performance
 HornetQ provides message persistence using its own built-in, high performance journal. It uses automatically Linux Asynchronous IO (AIO) or as fall back Java NIO to run on any Java platform.
 
 HornetQ can send and receive multi-gigabyte messages even the server is running with only 50MB of RAM. The developers tested messages up to 8GB.
+
+
+  [1]: https://github.com/edlich/streamqueue/blob/master/HornetQ/images/hornetq_jee_application_server_integration.jpg

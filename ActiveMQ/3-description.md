@@ -21,7 +21,7 @@ Next to the huge number of protocols ActiveMQ provides Client APIs for many **la
 ActiveMQ uses **OpenWire** as its native wire protocol for exchanging messages between brokers and clients. It is designed to be an efficient binary protocol in terms of netwerk bandwidth and performance. It also implements AMQP (Advanced Message Queuing Protocol), Stomp (Simple Text Oriented Message Protocol) and MQTT (Message Queue Telemetry Transport).
 
 ####Integration
-ActiveMQ provides an easy integration with many popular Java containers including: 
+ActiveMQ provides an easy integration with many popular **Java containers** including: 
 
  - Apache Tomcat
  - JBoss
@@ -30,5 +30,4 @@ ActiveMQ provides an easy integration with many popular Java containers includin
  - POJOs
  - Websphere
 
-####Enterprise Integration Patterns
-ActiveMQ supports Enterprise Integration Patterns using Apache Camel. It is a powerful integration framework based on the Spring Framework. 
+ActiveMQ supports **Enterprise Integration Patterns** using Apache Camel. It is a powerful integration framework based on the Spring Framework. 
