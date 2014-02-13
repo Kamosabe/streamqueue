@@ -9,7 +9,7 @@ The request-reply pattern connects a set of clients to a set of services, where 
 The *HelloWorld* application in chapter 1 one is a typical example for the request-response pattern.
 
 
-![Request - Response](images/zmq-req-rep.png)
+![Request - Response](images/zmq-req-rep-2.png)
 
 #### Request
 A client uses a socket of type `ZMQ_REP` for sending messages to and receiving replies from a server. If the socket is connected to more than one server the messages are sent with the round-robin routing strategy. Sockets of type `ZMQ_REP` does not throw any messages away. If there are no services / server to send the message, all send operations are blocked until a service comes available.  
@@ -30,7 +30,7 @@ A server uses a socket of type `ZMQ_REP` to receive messages from and send repli
 ### Publish - Subscribe
 The publish-subscribe pattern a one-to-many model where a publisher sends a message to a set of connected subscribers. This is a one-way data distribution pattern. It is similar to TV broadcasting, where only the viewers who turn on the specific channel are receiving the related information. That means the publisher do not care if there is any subscriber and only connected subscriber are receiving messages, whereas the others will miss them.
 
-![Publish - Subscribe](images/zmq-pub-sub.png)
+![Publish - Subscribe](images/zmq-pub-sub-2.png)
 
 
 #### Publisher
@@ -61,4 +61,4 @@ A socket of type `ZMQ_SUB` is used by a subscriber to subscribe to a publisher. 
 * The ventilator's PUSH socket distributes tasks to workers evenly (load balancing).
 * The sink's PULL socket collects results from workers evenly (fair-queuing).
 
-![Divide and Conquer](images/zmq-pipeline.png) 
+![Divide and Conquer](images/zmq-pipeline-2.png) 
