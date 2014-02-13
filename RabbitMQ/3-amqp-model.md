@@ -1,7 +1,7 @@
 ## AMQP Model
   
 ### AMQP connections
-To send a message to the RabbitMQ Broker a producer application first have to create a AMQP connection to the broker. AQMP is an application level protocol that uses TCP for reliable delivery. AMQP connections use authentication and can be protected with SSL.
+To send a message to the RabbitMQ broker a producer application first has to create a AMQP connection to the broker. AQMP is an application level protocol that uses TCP for reliable delivery. AMQP connections use authentication and can be protected with SSL.
 
 As some applications may need multiple connections to the broker it is possible to create one or more AMQP channels within a single connection. These channels are virtual connections inside a TCP connection with an unique ID. 
 
@@ -9,7 +9,7 @@ As some applications may need multiple connections to the broker it is possible 
 
 There are some good reason why this way of sending messages over an virtual connection instead of sending it directly via TCP is good.
 
-Setting up and tearing down TCP connection for every each message is very expensive for an operating system. Next thing is that your operating system can only build a specific number of TCP connections per seconds so that you will hit a performance wall soon.
+Setting up and tearing down TCP connection for every each message is very expensive for an operating system. Another point is that your operating system can only build a specific number of TCP connections per seconds so that you will hit a performance wall soon.
 
 With RabbitMQ you can create hundreds of thousands of channels a second and send messages (with specific label) from one endpoint to another.
 
@@ -34,7 +34,7 @@ Exchanges take a message and route it into zero or more queues. The routing algo
 
 There are four different types of exchanges: direct, fanout, topic and headers. We will cover the first three here in detail. 
 
-#### direct exchange
+#### Direct exchange
 
 A direct exchange delivers messages to queues based on the message routing key.
 
@@ -50,7 +50,7 @@ Here is an example of how to create a direct exchange with name "hello":
 	String exchangeType = "direct";
 	channel.exchangeDeclare(exchangeName, exchangeType);
 
-#### fanout exchange
+#### Fanout exchange
 
 A fanout exchange broadcasts a message to all bound queues while completely ignoring the routing key. We can think of an fanout exchange as a radio station.
  
@@ -65,9 +65,11 @@ Here is an example how to declare a fanout exchange:
 	channel.exchangeDeclare(exchangeName, exchangeType);
 
 
-#### topic exchange
+#### Topic exchange
 
-The topic exchange is the most complex and powerful of the three described exchanges. With this complexity it offers us a lot of use cases. The message is routed based on the message routing key and the queue routing pattern (regex based), which is defined while binding the queue to the exchange. 
+The topic exchange is the most complex and powerful of the three described exchanges. With this complexity it can be used in a lot of different cases. 
+
+The message is routed based on the message routing key and the queue routing pattern (regex based), which is defined while binding the queue to the exchange. 
 
 ![topic exchange](images/topic-exchange.png)
 
@@ -101,7 +103,7 @@ A consumer can register to a queue by using `channel.basicConsume()`:
 	String queueName = "nameOfQueue";
 	channel.basicConsume(queueName, true, consumer);
 
-To receive a single message from the queue the consumer then call `consumer.nextDelivery()`. To constantly listen for new messages you should wrap the call into an infinite loop:
+To receive a single message from the queue the consumer then calls `consumer.nextDelivery()`. To constantly listen for new messages you should wrap the call into an infinite loop:
 
 	while(true) {
 		QueueingConsumer.Delivery delivery = consumer.nextDelivery();
@@ -109,10 +111,12 @@ To receive a single message from the queue the consumer then call `consumer.next
 		System.out.println("received: " + message);
 	}
 
-If there are now consumers for a queue, the messages will remain in the queue until a new consumer is subscribing to the queue.
+If there are no consumers for a queue, the messages will remain in the queue until a new consumer is subscribing to the queue.
 
 ### Bindings
-We described how to create different types of exchanges and how to setup and read from queues. But one part is missing: Bindings. Bindings are rules that exchanges use to route messages to queues. To route a message from an exchange to a queue, the queue has to be bound to the exchange. 
+We described how to create different types of exchanges and how to setup and read from queues. But one part is missing: Bindings. 
+
+Bindings are rules that exchanges use to route messages to queues. To route a message from an exchange to a queue, the queue has to be bound to the exchange. 
 
 Bindings may have an routing key, which is used by some exchange types to filter messages before sending them to the matching bound queue(s).
 
