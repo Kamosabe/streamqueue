@@ -23,12 +23,9 @@ HornetQ is designed as a set of **Plain old Java Objects** (POJOs) without any t
 
 HornetQ has its own fully functional **Java Connector Architecture** (JCA) adaptor. It enables a simple integration into any JEE compliant application server. The picture below demonstrates the architecture.
 
-![enter image description here][1]
+![Figure JEE Application Server Integration](images/hornetq_jee_application_server_integration.jpg)
 
 ####Performance
 HornetQ provides message persistence using its own built-in, high performance journal. It uses automatically Linux Asynchronous IO (AIO) or as fall back Java NIO to run on any Java platform.
 
 HornetQ can send and receive multi-gigabyte messages even the server is running with only 50MB of RAM. The developers tested messages up to 8GB.
-
-
-  [1]: https://github.com/edlich/streamqueue/blob/master/HornetQ/images/hornetq_jee_application_server_integration.jpg
