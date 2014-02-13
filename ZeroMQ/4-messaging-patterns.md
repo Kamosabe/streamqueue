@@ -52,13 +52,110 @@ A socket of type `ZMQ_SUB` is used by a subscriber to subscribe to a publisher. 
 	subscriber.subscribe(filter.getBytes());
 
 ### Pipeline
-* parallel processing model
-	* ventilator produces tasks that can be done in parallel
-	* set of workers that processes tasks
-	* sink that collects results back from workers 
-* The workers connect upstream to the ventilator, and downstream to the sink.
-* We have to synchronize the start of the batch with all workers being up and running.
-* The ventilator's PUSH socket distributes tasks to workers evenly (load balancing).
-* The sink's PULL socket collects results from workers evenly (fair-queuing).
+The pipeline pattern is used for distributing data to nodes arranged in a pipeline. Parallel processing of data can be done using this pattern. 
 
-![Divide and Conquer](images/zmq-pipeline-2.png) 
+![Pipeline](images/zmq-pipeline-2.png) 
+
+Let's think of a scenario where a node has to process a huge task which can be divided into smaller pieces. The smaller tasks can then be pushed to fast worker nodes, who process these tasks in parallel. At the end every worker then pushes it's result to a collector node.
+
+In this scenario the workers connect upstream to the Ventilator (Producer) Node and downstream to the sink (Collector Node). The tasks will be distributed evenly by the ventilators PUSH socket to the workers (load balancing). The sink's PULL socket collects the results from workers evenly (fair-queuing). 
+
+Here is full cod example of the pipeline pattern to demonstrate the usage of `PUSH`and `PULL`sockets and to warp up everything we learned so far:
+
+TaskVentilator.java:
+
+	import java.util.Random;
+	import org.zeromq.ZMQ;
+	
+	public class TaskVentilator 
+	{
+	    public static void main (String[] args) throws Exception 
+		{
+	        ZMQ.Context context = ZMQ.context(1);
+	
+	        //  Socket to send messages to workers
+	        ZMQ.Socket workerSocket = context.socket(ZMQ.PUSH);
+	        workerSocket.bind("tcp://*:5557");
+	
+	        //  Initialize random number generator
+	        Random r = new Random(System.currentTimeMillis());
+	
+	        //  Send 100 tasks
+	        for (int i = 0; i < 100; i++) 
+			{
+	            int workload = r.nextInt(100) + 1;
+	            String string = String.format("%d", workload);
+	            workerSocket.send(string, 0);
+	        }
+			
+			//  Give 0MQ time to deliver
+	        Thread.sleep(1000);              
+	
+	        sink.close();
+	        sender.close();
+	        context.term();
+	    }
+	}
+
+
+TaskWorker.java:
+
+	import org.zeromq.ZMQ;
+
+	public class TaskWorker 
+	{
+	    public static void main (String[] args) throws Exception 	
+		{
+	        ZMQ.Context context = ZMQ.context(1);
+	
+	        //  Socket to receive messages from ventilator
+	        ZMQ.Socket ventilatorSocket = context.socket(ZMQ.PULL);
+	        ventilatorSocket.connect("tcp://localhost:5557");
+	
+	        //  Socket to send messages to sink
+	        ZMQ.Socket sinkSocket = context.socket(ZMQ.PUSH);
+	        sinkSocket.connect("tcp://localhost:5558");
+	
+	        while (Thread.currentThread ().isInterrupted () == false) 
+			{
+	            String string = new String(ventilatorSocket.recv(0)).trim();
+	            
+				long msec = Long.parseLong(string);
+	
+	            //  Do the 'work'
+	            Thread.sleep(msec);
+	
+	            //  Send results to sink
+	            sinkSocket.send("result".getBytes(), 0);
+	        }
+	        ventilatorSocket.close();
+	        sinkSocket.close();
+	        context.term();
+	    }
+	}
+
+TaskSink.java:
+
+	import org.zeromq.ZMQ;
+	
+	public class TaskSink 
+	{
+	    public static void main (String[] args) throws Exception 
+		{
+	        ZMQ.Context context = ZMQ.context(1);
+
+	        ZMQ.Socket workerSocket = context.socket(ZMQ.PULL);
+	        workerSocket.bind("tcp://*:5558");
+	
+	        //  Process 100 results from workers
+	        for (int i = 0; i < 100; i++) 
+			{
+				String result = new String(workerSocket.recv(0)).trim();
+
+				// doing something 'useful' with the result
+				System.out.println("result of worker " + i + ": " + result);
+	        }
+	        receiver.close();
+	        context.term();
+	    }
+	}
