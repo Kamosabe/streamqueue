@@ -17,7 +17,7 @@ It gives any application a single socket API to work with, no matter what the ac
 
 ZeroMQ queues messages at both sender and receiver, as needed, and it manages these queues carefully to ensure processes don’t run out of memory, over‐flowing to disk when appropriate. It also automatically reconnects to peers as they come and go. 
 
-#### Hello World example
+### Hello World example
 
 We will demonstrate the basic structure of an ZMQ application with a simple "Hello World" program. It follows the request-reponse pattern and consists of two parts. The first part is the client, which sends a "Hello" to the second part: the server, which replies with "World".  
 
