@@ -79,4 +79,10 @@ As we were talking about messages all the time it would make sense to define wha
 ![Request - Response](images/ZMQ-string.PNG)
 
 
-Conventional sockets are transferring data as streams of bytes or discrete datagrams, but ZeroMQ transfers messages. Messages are length-specified binary data without trailing 0 (not C style). They can be multiparted and must fit in memory. ZeroMQ guarantees to deliver all parts of an message or none of them. As ZeroMQ does not know anything about the data (except its size) the formatting is completely up to the developer of the application.
+Conventional sockets are transferring data as streams of bytes or discrete datagrams, but ZeroMQ transfers messages. 
+
+Messages are length-specified binary data without trailing 0 (not C style). They can be multiparted and must fit in memory. 
+
+ZeroMQ guarantees to deliver all parts of an message or none of them. 
+
+As ZeroMQ does not know anything about the data (except its size) the formatting is completely up to the developer of the application.

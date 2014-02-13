@@ -1,7 +1,4 @@
 ## Installation
- - http://zeromq.org/area:download
- - http://stackoverflow.com/questions/12901871/install-compile-zeromq-zmq-0mq-on-ubuntu-12-04-32bit
- - http://maddigitiser.wordpress.com/2013/05/02/installing-zeromq-on-ubuntu-13-04/
 
 This chapter will describe how to install and get ZMQ running on Linux and Window systems. 
 
@@ -40,12 +37,7 @@ As all of the examples in this book are making use of Java Programming Language 
 	sudo apt-get install default-jdk
 
 
-For further information about Java Programming language binding for ZeroMQ see chapter 4 "APIs".
-
-
 ### Windows
- - http://zeromq.org/area:download
- - http://zeromq.org/docs:windows-installations
 
 There are two ways to install ZeroMQ on an Windows system.
 

@@ -4,7 +4,7 @@ Messaging patterns are hard-coded rules, defining how ZeroMQ is routing and queu
 We will cover the three build-in core ZeroMQ pattern in the following sections.
 
 
-### Request - Reply
+### Request - Reply Pattern
 The request-reply pattern connects a set of clients to a set of services, where a client sends a message to one or more servers and receive a reply for each message sent. The replies to the request have to be strictly in order.
 The *HelloWorld* application in chapter 1 one is a typical example for the request-response pattern.
 
@@ -27,7 +27,7 @@ A server uses a socket of type `ZMQ_REP` to receive messages from and send repli
 	respond.bind("tcp://*:5555");
 
 
-### Publish - Subscribe
+### Publish - Subscribe Pattern
 The publish-subscribe pattern a one-to-many model where a publisher sends a message to a set of connected subscribers. This is a one-way data distribution pattern. It is similar to TV broadcasting, where only the viewers who turn on the specific channel are receiving the related information. That means the publisher do not care if there is any subscriber and only connected subscriber are receiving messages, whereas the others will miss them.
 
 ![Publish - Subscribe](images/zmq-pub-sub-2.png)
@@ -51,7 +51,7 @@ A socket of type `ZMQ_SUB` is used by a subscriber to subscribe to a publisher. 
 	String filter = "test";
 	subscriber.subscribe(filter.getBytes());
 
-### Pipeline
+### Pipeline Pattern
 The pipeline pattern is used for distributing data to nodes arranged in a pipeline. Parallel processing of data can be done using this pattern. 
 
 ![Pipeline](images/zmq-pipeline-2.png) 
@@ -60,7 +60,7 @@ Let's think of a scenario where a node has to process a huge task which can be d
 
 In this scenario the workers connect upstream to the Ventilator (Producer) Node and downstream to the sink (Collector Node). The tasks will be distributed evenly by the ventilators PUSH socket to the workers (load balancing). The sink's PULL socket collects the results from workers evenly (fair-queuing). 
 
-Here is full cod example of the pipeline pattern to demonstrate the usage of `PUSH`and `PULL`sockets and to warp up everything we learned so far:
+Here is full code example of the pipeline pattern to demonstrate the usage of `PUSH` and `PULL`sockets and to warp up everything we learned so far:
 
 TaskVentilator.java:
 
