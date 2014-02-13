@@ -414,7 +414,7 @@ AMQP clients specify what vhost they want to use while creating a connection.
  </tr>
  <tr>
   <td>Language</td>
-  <td>Java, .NET, Ruby, Python, PHP, Perl, C, C++, ...</td>
+  <td>Erlang</td>
  </tr> 
  <tr>
   <td>Operating system</td>
