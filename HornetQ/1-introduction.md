@@ -6,8 +6,6 @@ JBoss justifies the exclusive name with:
  
 >Also they make great logos.
 
-(https://community.jboss.org/wiki/HornetQGeneralFAQs)
-
 ## Introduction
 At the moment of creating this document the last stable release version 2.4.0 was from December 12, 2013. HornetQ is licensed by Apache Software License 2 providing developers with a multitude of options. The roadmap shows that HornetQ will be as flexible as Apache ActiveMQ. Today it already supports several operating systems, communication protocols and server systems. It is designed to work well with JBoss components. 
 
