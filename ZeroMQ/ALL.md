@@ -1,6 +1,6 @@
 # ZeroMQ
 
-## introduction
+## Introduction
 *Message Queuing* is all about connecting two or more endpoints and sending messages between them. Implemented as simple FIFO queues, priority queues or double-ended queues they enable us to communicate asynchronously between loosely-coupled components. 
 
 Especially in large-scaled distributed systems message queuing is widely used. 
@@ -166,7 +166,7 @@ There are two ways to install ZeroMQ on an Windows system.
 
 Go to "Installers for Microdsoft Windows" page (http://zeromq.org/distro:microsoft-windows), download the latest stable release for your system (x64 or x86) and install it into a directory of your choice.
 
-#### build with Microsoft Visual C++ 2008
+#### Build with Microsoft Visual C++ 2008
 
 First you need Microsoft Visual C++ 2008 or newer installed. 
 

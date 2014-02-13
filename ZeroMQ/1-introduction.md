@@ -1,6 +1,6 @@
 # ZeroMQ
 
-## introduction
+## Introduction
 *Message Queuing* is all about connecting two or more endpoints and sending messages between them. Implemented as simple FIFO queues, priority queues or double-ended queues they enable us to communicate asynchronously between loosely-coupled components. 
 
 Especially in large-scaled distributed systems message queuing is widely used. 
