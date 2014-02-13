@@ -19,7 +19,7 @@
  </tr>
  <tr>
   <td>Language</td>
-  <td>C, PHP, Python, C++, C#, Java, Delphi, Objective-C, Clojure, ...</td>
+  <td>C</td>
  </tr> 
  <tr>
   <td>Operating system</td>
