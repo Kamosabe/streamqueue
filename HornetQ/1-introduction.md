@@ -1,4 +1,4 @@
-# JBoss HornetQ
+# HornetQ
 JBoss justifies the exclusive name with:
 >Hornets are fast, angry and have attitude, with a sting in their tail.
 
@@ -16,10 +16,12 @@ The following table shows some details on HornetQ.
 | Software developer | JBoss                  |
 | Stable release     | 2.4.0 - December 12, 2013 |
 | Development status | Active                 |
+| Development release| 2.5                    |
 | Language           | Java                   |
 | Operating system   | Cross-platform         |
-| Type               | Asynchronous messaging |
+| Type               | message-oriented middleware |
 | Subtype            | Queuing                |
 | License            | Apache License 2.0     |
 | Website            | http://www.hornetq.org |
+| Community          | http://www.jboss.org/hornetq/community |
 

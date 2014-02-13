@@ -1,6 +1,6 @@
 # Apache ActiveMQ
 Apache introduces the homepage of ActiveMQ with the words: 
-    >Apache ActiveMQ is the most popular and powerful open source messaging and Integration Patterns   server. **(Source ???)**
+    >Apache ActiveMQ is the most popular and powerful open source messaging and Integration Patterns   server.
 
 ## Introduction
 At the moment of creating this document the last stable release version 5.9.0 was from October 21, 2013. Apache ActiveMQ is licensed by Apache Software License 2 providing developers with a multitude of options. ActiveMQ is very flexible: there are many programming languages, operating systems, communication protocolls and server systems which are supported. The following list provides a short overview:
@@ -24,3 +24,4 @@ At the moment of creating this document the last stable release version 5.9.0 wa
 | Subtype            | Queuing                                                               |
 | License            | Apache License 2.0                                                    |
 | Website            | http://activemq.apache.org                                            |
+| Community          | http://activemq.apache.org/community.html                             |
