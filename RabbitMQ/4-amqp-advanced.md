@@ -1,23 +1,50 @@
 ## AMQP Advanced
 
+### Persistence
 
+Per default queues, exchanges and therefore also messages will not survive a reboot or a crash of RabbitMQ server.
+
+To make a message survive a crash of the AMQP broker we have to follow the following steps:
+
+- The message has to be flagged as *persistent* by setting its delivery mode to 2.
+- message must be published to an exchange that is *durable*
+- message has to arrive in a queue that is *durable*
+
+We can declare an durable exchange by setting the `durable` parameter of `exchangeDeclare()` method to `true`:
+	
+	String exchangeName = "nameOfExchange";
+	String exchangeType = "topic";
+	boolean durable = true;
+	channel.exchangeDeclare(exchangeName, exchangeType, durable); 
+
+We can declare an durable queue by setting the `durable` parameter of `queueDeclare()`method to `true`:
+
+	String queueName = "nameOfQueue";
+	boolean durable = true;
+	channel.queueDeclare(queuName, durable, false, false, null); 
+
+One could ask, why not always make queues and exchange durable and messages persistent to be save if something goes wrong.
+
+But there is a drawback: Performance. RabbitMQ will achieve persistence by writing message to disk and this can be an time consuming task.
 
 ### Virtual Hosts
-* mini-RabbitMQ server with own
-	* queues
-	* exchanges
-	* bindings
-	* permissions
-* safely use one RabbitMQ server for multiple applications
-* minimum one vhost per server (default)
-* rabbitmqctl add_vhost [name]
-* rabbitmqctl delete_vhost [name] 
+To make it possible for a single broker to host multiple isolated environments (own queues, exchanges, bindings, permissions) the AMQP protocol offers us the concept of virtual hosts (vhosts).
 
-### Persistence
-* normally queues and exchanges and therefore also messages will not survive reboot of RabbitMQ server
-* to make a message survive a crash of the AMQP broker you have to follow some steps:
-	* flag message as persistent by setting delivery mode to 2 (persistent)  
-	* message must be published to an exchange that*s durable and
-	* message arrive in queue that is durable
-* RabbitMQ will achieve persistence by writing message to disk
-* price: performance
+Actually while starting a RabbitMQ server, one virtual host is created right away per default.
+
+To add or remove vhosts from the server we simple can use the command line tool `rabbitmqctl` from the RabbitMQ installation.
+
+Creating vhost "newvhost":
+
+![AMQP connection](images/create-vhost.png)
+
+
+Deleting vhost "newvhost":
+
+![AMQP connection](images/delete-vhost.png)
+
+AMQP clients specify what vhost they want to use while creating a connection.
+
+	ConnectionFactory factory = new ConnectionFactory();
+	factory.setVirtualHost(virtualHost);
+	Connection conn = factory.newConnection();
