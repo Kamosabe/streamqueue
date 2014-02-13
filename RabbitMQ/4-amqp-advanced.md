@@ -36,12 +36,12 @@ To add or remove vhosts from the server we simple can use the command line tool 
 
 Creating vhost "newvhost":
 
-![AMQP connection](images/create-vhost.png)
+![AMQP connection](images/create-vhost.PNG)
 
 
 Deleting vhost "newvhost":
 
-![AMQP connection](images/delete-vhost.png)
+![AMQP connection](images/delete-vhost.PNG)
 
 AMQP clients specify what vhost they want to use while creating a connection.
 

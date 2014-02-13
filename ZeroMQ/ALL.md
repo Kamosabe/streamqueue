@@ -468,7 +468,8 @@ TaskSink.java:
   <td>Website</td>
   <td>http://zeromq.org/</td>
  </tr>
-</table>													 |
+</table>
+
 
 
 ## References
