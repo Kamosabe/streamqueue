@@ -1,7 +1,5 @@
 ## Installation
-
 This section explains the installation of Apache ActiveMQ on a Windows and a Unix operating system.
-
 
 ### Windows
 How to install and run the binary distribution on a Windows system is described in the following.
@@ -10,6 +8,37 @@ How to install and run the binary distribution on a Windows system is described 
  1. Download the latest release from http://activemq.apache.org/download.html
  2. Extract the ZIP file to a directory of your choice
 
+The following describes the directory structure of the downloaded archive: 
+
+     |___ bin
+     |
+     |___ conf
+     |
+     |___ data
+     |
+     |___ docs
+     |
+     |___ examples
+     |      |___ ampq
+     |      |___ mqtt
+     |      |___ openwire
+     |      |___ stomp
+     |
+     |___ lib
+     |
+     |___ webapps
+     |
+     |___ webapps-demo
+
+ - ***bin*** -- binaries and scripts required to run ActiveMQ
+ - ***conf*** -- configuration files required to configure ActiveMQ
+ - ***data*** -- directory where the log files and message persistence data is stored
+ - ***docs*** -- guides for ActiveMQ
+ - ***examples*** -- examples for different APIs, languages, protocols, ...
+ - ***lib*** -- jars and libraries needed by ActiveMQ
+ - ***webapps*** -- holds the ActiveMQ web console
+ - ***webapps-demo*** -- some web-related demos
+ 
 #### Starting ActiveMQ
 After successful installation run the ActiveMQ Message Broker. Therefore it is necessary to open the Windows Console and change to the installation directory:
 
@@ -40,6 +69,8 @@ Extract the files from the GZip file into a directory of your choice. For exampl
 If the ActiveMQ start-up script is not executable change its permissions. The ActiveMQ script is located in the bin directory. For example:
 
     > cd [activemq_install_dir]/bin
+    
+The structure of the downloaded archive is shown above as part of the Windows installation. 
 
 #### Starting ActiveMQ
 Use a command shell, change to the installation directory and run ActiveMQ:

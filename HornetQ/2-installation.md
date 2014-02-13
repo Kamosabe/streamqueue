@@ -40,13 +40,13 @@ The following describes the directory structure of the downloaded archive:
      |
      |___ schemas
 
- - *bin* -- binaries and scripts required to run HornetQ
- - *config* -- configuration files required to configure HornetQ containing default configurations
- - *docs* -- guides and javadocs for HornetQ
- - *examples* -- JMS and Java EE example
- - *lib* -- jars and libraries required to run HornetQ
- - *licenses* -- licenses for HornetQ
- - *schemas* -- XML Schemas used to validate HornetQ configuration files
+ - ***bin*** -- binaries and scripts required to run HornetQ
+ - ***config*** -- configuration files required to configure HornetQ containing default configurations
+ - ***docs*** -- guides and javadocs for HornetQ
+ - ***examples*** -- Core, JMS and JavaEE examples
+ - ***lib*** -- jars and libraries required to run HornetQ
+ - ***licenses*** -- licenses for HornetQ
+ - ***schemas*** -- XML Schemas used to validate HornetQ configuration files
 
 
 ### Starting HornetQ
